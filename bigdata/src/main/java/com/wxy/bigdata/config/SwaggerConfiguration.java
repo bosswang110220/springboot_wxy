@@ -10,6 +10,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
 
+
 /**
  * Created with IntelliJ IDEA.
  * User: WangYN
