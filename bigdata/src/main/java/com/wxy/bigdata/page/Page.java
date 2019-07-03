@@ -8,12 +8,19 @@ import java.util.Map;
  * 用来传递分页参数和查询参数params
  */
 public class Page<T> {
-    private int pageNo = 1;			//页码，默认是第一页
-    private int pageSize = 5;		//每页显示的记录数，默认是10
-    private int totalRecord;		//总记录数
-    private int totalPage;			//总页数
-    private List<T> results;		//对应的当前页记录
-    private Map<String, Object> params = new HashMap<String, Object>();		//其他的参数我们把它分装成一个Map对象
+
+    //页码，默认是第一页
+    private int pageNo = 1;
+    //每页显示的记录数，默认是10
+    private int pageSize = 5;
+    //总记录数
+    private int totalRecord;
+    //总页数
+    private int totalPage;
+    //对应的当前页记录
+    private List<T> results;
+    //其他的参数我们把它分装成一个Map对象
+    private Map<String, Object> params = new HashMap<String, Object>();
  
     public int getPageNo() {
        return pageNo;
