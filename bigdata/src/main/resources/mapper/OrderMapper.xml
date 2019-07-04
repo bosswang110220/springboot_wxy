@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxy.bigdata.mapper.OrderMapper" >
+  <resultMap id="BaseResultMap" type="com.wxy.bigdata.entity.Order" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="seller_uuid" property="sellerUuid" jdbcType="VARCHAR" />
+    <result column="account_uuid" property="accountUuid" jdbcType="VARCHAR" />
+    <result column="food_uuid" property="foodUuid" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="DECIMAL" />
+    <result column="orderStatus" property="orderstatus" jdbcType="TINYINT" />
+    <result column="payStatus" property="paystatus" jdbcType="TINYINT" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="updateTime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from `order`
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.wxy.bigdata.entity.Order" useGeneratedKeys="true" keyProperty="id" >
+    insert into `order` (uuid, seller_uuid, account_uuid, 
+      food_uuid, amount, orderStatus, 
+      payStatus, createTime, updateTime
+      )
+    values (#{uuid,jdbcType=VARCHAR}, #{sellerUuid,jdbcType=VARCHAR}, #{accountUuid,jdbcType=VARCHAR}, 
+      #{foodUuid,jdbcType=VARCHAR}, #{amount,jdbcType=DECIMAL}, #{orderstatus,jdbcType=TINYINT}, 
+      #{paystatus,jdbcType=TINYINT}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wxy.bigdata.entity.Order" >
+    update `order`
+    set uuid = #{uuid,jdbcType=VARCHAR},
+      seller_uuid = #{sellerUuid,jdbcType=VARCHAR},
+      account_uuid = #{accountUuid,jdbcType=VARCHAR},
+      food_uuid = #{foodUuid,jdbcType=VARCHAR},
+      amount = #{amount,jdbcType=DECIMAL},
+      orderStatus = #{orderstatus,jdbcType=TINYINT},
+      payStatus = #{paystatus,jdbcType=TINYINT},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, uuid, seller_uuid, account_uuid, food_uuid, amount, orderStatus, payStatus, 
+    createTime, updateTime
+    from `order`
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, uuid, seller_uuid, account_uuid, food_uuid, amount, orderStatus, payStatus, 
+    createTime, updateTime
+    from `order`
+  </select>
+</mapper>

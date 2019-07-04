@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wxy.bigdata.mapper.FoodMapper" >
+  <resultMap id="BaseResultMap" type="com.wxy.bigdata.entity.Food" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="seller_uuid" property="sellerUuid" jdbcType="VARCHAR" />
+    <result column="category_uuid" property="categoryUuid" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="specialPrice" property="specialprice" jdbcType="DECIMAL" />
+    <result column="stock" property="stock" jdbcType="INTEGER" />
+    <result column="desc" property="desc" jdbcType="VARCHAR" />
+    <result column="icon" property="icon" jdbcType="VARCHAR" />
+    <result column="categoryCode" property="categorycode" jdbcType="INTEGER" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
+    <result column="updateTime" property="updatetime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from `food`
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="com.wxy.bigdata.entity.Food" useGeneratedKeys="true" keyProperty="id" >
+    insert into `food` (uuid, seller_uuid, category_uuid, 
+      name, price, specialPrice, 
+      stock, desc, icon, 
+      categoryCode, createTime, updateTime
+      )
+    values (#{uuid,jdbcType=VARCHAR}, #{sellerUuid,jdbcType=VARCHAR}, #{categoryUuid,jdbcType=VARCHAR}, 
+      #{name,jdbcType=VARCHAR}, #{price,jdbcType=DECIMAL}, #{specialprice,jdbcType=DECIMAL}, 
+      #{stock,jdbcType=INTEGER}, #{desc,jdbcType=VARCHAR}, #{icon,jdbcType=VARCHAR}, 
+      #{categorycode,jdbcType=INTEGER}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wxy.bigdata.entity.Food" >
+    update `food`
+    set uuid = #{uuid,jdbcType=VARCHAR},
+      seller_uuid = #{sellerUuid,jdbcType=VARCHAR},
+      category_uuid = #{categoryUuid,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DECIMAL},
+      specialPrice = #{specialprice,jdbcType=DECIMAL},
+      stock = #{stock,jdbcType=INTEGER},
+      desc = #{desc,jdbcType=VARCHAR},
+      icon = #{icon,jdbcType=VARCHAR},
+      categoryCode = #{categorycode,jdbcType=INTEGER},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select id, uuid, seller_uuid, category_uuid, name, price, specialPrice, stock, desc, 
+    icon, categoryCode, createTime, updateTime
+    from `food`
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, uuid, seller_uuid, category_uuid, name, price, specialPrice, stock, desc, 
+    icon, categoryCode, createTime, updateTime
+    from `food`
+  </select>
+</mapper>
