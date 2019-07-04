@@ -64,7 +64,7 @@
 		</javaClientGenerator>
 
 		<!-- 配置这次要求生成的表对应的domain,mapper等 -->
-		<table tableName="" domainObjectName="" delimitIdentifiers="true">
+		<table tableName="user" domainObjectName="User" delimitIdentifiers="true">
 			<!-- 参考 javaModelGenerator 的 constructorBased属性 -->
 			<property name="constructorBased" value="false" />
 			<generatedKey column="id" sqlStatement="JDBC"/>

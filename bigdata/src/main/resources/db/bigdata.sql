@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2019-07-03 16:48:03
+Date: 2019-07-04 17:44:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -109,7 +109,7 @@ CREATE TABLE `user` (
   `uuid` varchar(255) DEFAULT NULL COMMENT '唯一标识 ',
   `seller_uuid` varchar(255) DEFAULT NULL COMMENT '商家uuid',
   `phone` varchar(32) NOT NULL,
-  `name` varchar(32) NOT NULL,
+  `username` varchar(32) NOT NULL,
   `password` varchar(32) NOT NULL,
   `address` varchar(128) NOT NULL COMMENT '买家地址',
   `email` varchar(32) NOT NULL,
@@ -117,8 +117,9 @@ CREATE TABLE `user` (
   `reg_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
   `login_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '修改时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='账户(买家)信息表';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='账户(买家)信息表';
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
+INSERT INTO `user` VALUES ('2', '9904', '334', '32', 'admin', '123456', '333', '33', '33', '2019-07-04 14:47:34', '2019-07-03 14:47:28');

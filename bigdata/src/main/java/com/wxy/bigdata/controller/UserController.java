@@ -124,7 +124,7 @@ public class UserController {
         JsonResult r = new JsonResult();
         try {
             User u = userService.selectByPrimaryKey(id);
-            u.setName(user.getName());
+            u.setUsername(user.getUsername());
             User record = users.put(id, u);
             userService.updateByPrimaryKey(record);
             r.setResult(u);
