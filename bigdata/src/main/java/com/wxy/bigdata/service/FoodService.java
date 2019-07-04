@@ -1,7 +1,6 @@
 package com.wxy.bigdata.service;
 
 import com.wxy.bigdata.entity.Food;
-import com.wxy.bigdata.entity.User;
 
 import java.util.List;
 

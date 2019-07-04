@@ -1,7 +1,6 @@
 package com.wxy.bigdata.service.impl;
 
 import com.wxy.bigdata.entity.Food;
-import com.wxy.bigdata.entity.User;
 import com.wxy.bigdata.mapper.FoodMapper;
 import com.wxy.bigdata.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;

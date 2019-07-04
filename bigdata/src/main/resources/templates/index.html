@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>餐饮-码农悟道 </title>
+
+		<!-- ================= Favicon ================== -->
+		<!-- Standard -->
+		<link rel="shortcut icon" href="http://placehold.it/64.png/000/fff">
+		<!-- Retina iPad Touch Icon-->
+		<link rel="apple-touch-icon" sizes="144x144" href="http://placehold.it/144.png/000/fff">
+		<!-- Retina iPhone Touch Icon-->
+		<link rel="apple-touch-icon" sizes="114x114" href="http://placehold.it/114.png/000/fff">
+		<!-- Standard iPad Touch Icon-->
+		<link rel="apple-touch-icon" sizes="72x72" href="http://placehold.it/72.png/000/fff">
+		<!-- Standard iPhone Touch Icon-->
+		<link rel="apple-touch-icon" sizes="57x57" href="http://placehold.it/57.png/000/fff">
+
+		<!-- Styles -->
+		<link href="css/lib/font-awesome.min.css" rel="stylesheet">
+		<link href="css/lib/themify-icons.css" rel="stylesheet">
+		<link href="css/lib/sidebar.css" rel="stylesheet">
+		<link href="css/lib/bootstrap.min.css" rel="stylesheet">
+		<link href="css/lib/simdahs.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<div class="sidebar sidebar-hide-to-small sidebar-shrink sidebar-gestures">
+			<div class="nano">
+				<div class="nano-content">
+					<ul>
+						<li class="label">Main</li>
+						<li class="active">
+							<a href="javascript:;" opr="home"><i class="ti-home"></i> 经营分析 </a>
+						</li>
+
+						<li>
+							<a href="javascript:;" opr="shop"><i class="ti-user"></i> 商家信息</a>
+						</li>
+
+						<li class="label">Features</li>
+
+						<li>
+							<a class="sidebar-sub-toggle"><i class="ti-layout-grid2"></i> 菜品类别 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+							<ul opr="dish">
+								<li>
+									<a href="javascript:;" dishCode="01"> 荤菜</a>
+								</li>
+								<li>
+									<a href="javascript:;" dishCode="02"> 素菜</a>
+								</li>
+								<li>
+									<a href="javascript:;" dishCode="03"> 啤酒</a>
+								</li>
+								<li>
+									<a href="javascript:;" dishCode="04"> 白酒</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="javascript:;" opr="food"><i class="ti-gallery"></i> 菜品管理</a>
+						</li>
+						<li class="label">order</li>
+						<li>
+							<a class="sidebar-sub-toggle"><i class="ti-agenda"></i> 订单管理 <span class="sidebar-collapse-icon ti-angle-down"></span></a>
+							<ul opr="order">
+								<li>
+									<a href="javascrtpt:;" orderCode="01">今日订单</a>
+								</li>
+								<li>
+									<a href="javascrtpt:;" orderCode="02">历史订单</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- /# sidebar -->
+
+		<div class="header">
+			<div class="pull-left">
+				<div class="logo" id="sideLogo">
+					<a href="index.html">
+						<img class="full-logo" src="images/logo-big.png" alt="SimDahs">
+						<img class="small-logo" src="images/logo-small.png" alt="SimDahs">
+					</a>
+				</div>
+				<div class="hamburger sidebar-toggle">
+					<span class="ti-menu"></span>
+				</div>
+			</div>
+
+			<div class="pull-right p-r-15">
+				<ul>
+					<li class="header-icon dib"><i class="ti-bell"></i>
+						<div class="drop-down">
+							<div class="dropdown-content-heading">
+								<span class="text-left">Recent Notifications</span>
+							</div>
+							<div class="dropdown-content-body">
+								<ul>
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Mr. Wolf</div>
+												<div class="notification-text">5 members joined today </div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Sofiya</div>
+												<div class="notification-text">likes a photo of you</div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Richard</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+
+									<li>
+										<a href="#">
+											<img class="pull-left m-r-10 avatar-img" src="images/avatar/3.jpg" alt="" />
+											<div class="notification-content">
+												<small class="notification-timestamp pull-right">02:34 PM</small>
+												<div class="notification-heading">Sara Maggi</div>
+												<div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+											</div>
+										</a>
+									</li>
+									<li class="text-center">
+										<a href="#" class="more-link">See All</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+
+					<li class="header-icon dib"><img class="avatar-img" src="images/avatar/1.jpg" alt="" /> <span class="user-avatar">Wolf <i class="ti-angle-down f-s-10"></i></span>
+						<div class="drop-down dropdown-profile">
+							<div class="dropdown-content-heading">
+								<span class="text-left">Upgrade Now</span>
+								<p class="trial-day">30 Days Trail</p>
+							</div>
+							<div class="dropdown-content-body">
+								<ul>
+									<li>
+										<a href="#"><i class="ti-settings"></i> <span>设置</span></a>
+									</li>
+									<li>
+										<a href="#"><i class="ti-help-alt"></i> <span>帮助</span></a>
+									</li>
+									<li>
+										<a href="javascript:;" opr="logout"><i class="ti-power-off"></i> <span>退出登录</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="content-wrap">
+			<div class="main">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-8 p-0">
+							<div class="page-header">
+								<div class="page-title">
+									<h1>Dashboard</h1>
+								</div>
+							</div>
+						</div>
+						<!-- /# column -->
+						<div class="col-lg-4 p-0">
+							<div class="page-header">
+								<div class="page-title">
+									<ol class="breadcrumb text-right">
+										<li>
+											<a href="#">Dashboard</a>
+										</li>
+										<li class="active">Home</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+						<!-- /# column -->
+					</div>
+
+					<div class="main-content">
+
+					</div>
+
+				</div>
+				<!-- /# container-fluid -->
+			</div>
+			<!-- /# main -->
+		</div>
+		<!-- /# content wrap -->
+
+		<script src="js/lib/jquery.min.js"></script>
+		<!-- nano scroller -->
+		<script src="js/lib/jquery.nanoscroller.min.js"></script>
+		<!-- sidebar -->
+		<script src="js/lib/sidebar.js"></script>
+		<!-- bootstrap -->
+		<script src="js/lib/bootstrap.min.js"></script>
+
+		<script src="js/scripts.js"></script>
+		<script src="js/lib/highcharts/highcharts.js"></script>
+		<script type="text/javascript" src="js/common/core.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+
+
+	</body>
+
+</html>

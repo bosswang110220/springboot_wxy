@@ -16,5 +16,5 @@ public interface UserService {
 
     int updateByPrimaryKey(User record);
 
-
+    User query(String username, String password);
 }

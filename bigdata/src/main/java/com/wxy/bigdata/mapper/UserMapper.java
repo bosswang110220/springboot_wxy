@@ -2,6 +2,7 @@ package com.wxy.bigdata.mapper;
 
 import com.wxy.bigdata.entity.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,4 +17,8 @@ public interface UserMapper {
     List<User> selectAll();
 
     int updateByPrimaryKey(User record);
+
+
+    User query(@Param("username") String username, @Param("password") String password);
+
 }

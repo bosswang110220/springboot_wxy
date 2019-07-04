@@ -8,11 +8,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
 @Service
 public class UserServiceImpl implements UserService {
 
 @Autowired
-   private  UserMapper userMapper;
+   private UserMapper userMapper;
 
     @Override
     public int deleteByPrimaryKey(Long id) {
@@ -37,5 +38,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public int updateByPrimaryKey(User record) {
         return userMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public User query(String username, String password) {
+
+        return userMapper.query(username,password);
     }
 }
